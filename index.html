@@ -5,23 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Agrinho - Desastres Naturais</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos CSS para o exemplo */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        main {
+            padding: 2em;
+        }
+
+        section {
+            display: none;
+            margin-bottom: 2em;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Projeto Agrinho</h1>
         <nav>
             <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#tipos">Tipos de Desastres</a></li>
-                <li><a href="#prevenção">Prevenção</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#" onclick="showSection('home')">Início</a></li>
+                <li><a href="#" onclick="showSection('sobre')">Sobre</a></li>
+                <li><a href="#" onclick="showSection('tipos')">Tipos de Desastres</a></li>
+                <li><a href="#" onclick="showSection('prevencao')">Prevenção</a></li>
+                <li><a href="#" onclick="showSection('contato')">Contato</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <section id="home">
+        <section id="home" class="active">
             <h2>Bem-vindo ao Projeto Agrinho</h2>
             <p>Descubra como o projeto Agrinho está ajudando a enfrentar desastres naturais.</p>
         </section>
@@ -36,7 +102,7 @@
             <p>Uma visão geral dos diferentes tipos de desastres naturais e seus impactos.</p>
         </section>
         
-        <section id="prevenção">
+        <section id="prevencao">
             <h2>Prevenção e Mitigação</h2>
             <p>Dicas e estratégias para prevenir e mitigar os efeitos dos desastres naturais.</p>
         </section>
@@ -50,5 +116,21 @@
     <footer>
         <p>&copy; 2024 Projeto Agrinho</p>
     </footer>
+
+    <script>
+        function showSection(id) {
+            // Esconde todas as seções
+            var sections = document.querySelectorAll('main section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // Mostra a seção selecionada
+            var activeSection = document.getElementById(id);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
