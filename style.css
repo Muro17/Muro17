@@ -44,6 +44,7 @@ main {
 }
 
 section {
+    display: none;
     margin-bottom: 2em;
 }
 
@@ -55,4 +56,8 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.active {
+    display: block;
 }
