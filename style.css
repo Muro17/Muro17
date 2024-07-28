@@ -20,20 +20,23 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    background-color: #333;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    padding: 14px 20px;
+    display: block;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #575757;
 }
 
 main {
